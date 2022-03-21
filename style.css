@@ -1,0 +1,122 @@
+*, ::before, ::after 
+{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+
+}
+
+#container
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+}
+
+#Titre
+{
+	font-family: Arial;
+	font-size: clamp(70px, 6vw, 100px);
+}
+
+#nombre
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 100px;
+	min-height: 100px;
+	font-size: clamp(80px, 5vw, 100px);
+	font-weight: bold;
+	transition: all .5s;
+}
+
+#moreOrLess
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 500px;
+	height: 100px;
+}
+
+.bouton
+{
+	cursor: pointer;
+	width: 110px;
+	height: 60px;
+	font-weight: bold;
+	font-size: 130%;
+	transition: all .5s;
+	border-radius: 25px;
+	border: none;
+	box-shadow: 0 0 5px black;
+}
+
+.bouton:hover
+{
+	background-color: #2A2D34;
+	color: white;
+	box-shadow: 0 0 25px #2A2D34;
+}
+
+
+
+/*Mode sombre*/
+.dark
+{
+	background-color: #2A2D34;
+	color: white;
+	transition: all .7s;
+}
+
+.clair
+{
+	background-color: white;
+	color: black;
+	transition: all .7s;
+}
+
+#boutonModeSombre
+{
+	cursor: pointer;
+	position: absolute;
+	right: 3%;
+	top: 5%;
+	width: 60px;
+	height: 60px;
+	background-image: url('icon/lune.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: all .6s;
+}
+
+#boutonModeClair
+{
+	cursor: pointer;
+	position: absolute;
+	right: 3%;
+	top: 5%;
+	width: 60px;
+	height: 60px;
+	background-image: url('icon/soleil.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: all .6s;
+}
+
+
+
+/*Responsive design*/
+@media (max-width: 630px)
+{
+	#moreOrLess
+	{
+		width: 400px;
+	}
+}
